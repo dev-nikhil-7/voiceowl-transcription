@@ -1,0 +1,27 @@
+# Node modules (ignore everywhere)
+node_modules/
+**/node_modules/
+
+# Build outputs
+dist/
+build/
+**/dist/
+**/build/
+
+# Env files
+.env
+.env.*
+frontend/.env
+backend/.env
+
+# Logs
+npm-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Coverage
+coverage/
+
+# IDE & OS
+.vscode/
+.DS_Store
