@@ -1,0 +1,211 @@
+{
+	"info": {
+		"_postman_id": "9030d8c5-1e57-4e79-b24c-f839062b5776",
+		"name": "VoiceOwl API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "7663377"
+	},
+	"item": [
+		{
+			"name": "Transcription",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"audioUrl\": \"http://localhost:5000/uploads/test.wav\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/v1/transcription",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"v1",
+						"transcription"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Azure Transcription",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"audioUrl\": \"http://localhost:5000/uploads/test.m4a\",\r\n  \"language\": \"en-US\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/v1/azure-transcription",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"v1",
+						"azure-transcription"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Transcriptions",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/v1/transcriptions",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"v1",
+						"transcriptions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Transcribed",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/v1/transcriptions/transcribed",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"v1",
+						"transcriptions",
+						"transcribed"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Review",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/v1/transcriptions/review",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"v1",
+						"transcriptions",
+						"review"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Move to review",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/v1/transcriptions/69381fcd7748f3569ae13df1/review",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"v1",
+						"transcriptions",
+						"69381fcd7748f3569ae13df1",
+						"review"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Approve",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/v1/transcriptions/69381fcd7748f3569ae13df1/approve",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"v1",
+						"transcriptions",
+						"69381fcd7748f3569ae13df1",
+						"approve"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
